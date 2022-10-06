@@ -1,4 +1,4 @@
-package java1005_basic;
+package java001_basic;
 
 /*
  * ctrl + Spacebar : 자동완성 
@@ -26,7 +26,7 @@ public class Java004_casting {
 
 		// 형변환 (casting)
 		// 묵시적 형변환 : 작은 데이터 타입을 큰 데이터 타입으로 변활할때 발생
-		// 명시적 형변환 : 큰 데이터 타입을 작은 데이터 타입으로 변환할때 발생
+		// 명시적 형변환 : 큰 데이터 타입을 작은 데이터 타입으로 변환할때 발생 (=강제 형변환), 데이터의 손실 가능성 있음ㅋ
 
 		long gNum = 6; // 묵시적 형변환 : int -> long
 		System.out.println(gNum);

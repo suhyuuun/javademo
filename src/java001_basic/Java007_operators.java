@@ -1,4 +1,4 @@
-package java1005_basic;
+package java001_basic;
 
 public class Java007_operators {
 

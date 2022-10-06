@@ -1,4 +1,4 @@
-package java1005_basic;
+package java001_basic;
 
 /*
  * 리터널(literal) : 그 자체의 값 (1,2,3,..., 'a','b','c',..., true, false)
