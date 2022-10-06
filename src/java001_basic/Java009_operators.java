@@ -9,7 +9,8 @@ public class Java009_operators {
 		++x;// x = x+1, x+=1
 		System.out.println(x);//4
 		
-		x--;// x= x-1, x-=1
+		
+		--x;// x= x-1, x-=1
 		System.out.println(x);//3
 		
 		int y = 5;

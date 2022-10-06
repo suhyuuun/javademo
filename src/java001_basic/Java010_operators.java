@@ -6,7 +6,7 @@ public class Java010_operators {
 		int i = 5;
 		int j = 0;
 		
-		//전위형 ㅣ 값이 찹조되기 전에 증가시킨다.
+		//전위형 ㅣ 값이 참조되기 전에 증가시킨다.
 		j =++i;
 		System.out.printf("i=%d, j=%d\n", i, j);//i=6, j=6
 		

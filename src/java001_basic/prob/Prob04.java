@@ -18,7 +18,7 @@ public class Prob04 {
 		
 		//여기에 작성하시오.
 		boolean res;
-		res = year%4==0 && year%100!=0 || year%400==0;
+		res = (year%4==0 && year%100!=0) || (year%400==0);
 		String leapYear = res?  "윤년":"평년";
 		
 		System.out.printf("%d년도는 %s입니다.\n", year, leapYear);
