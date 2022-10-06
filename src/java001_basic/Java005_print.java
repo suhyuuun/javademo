@@ -1,5 +1,5 @@
 package java001_basic;
-
+  
 public class Java005_print {
 
 	public static void main(String[] args) {

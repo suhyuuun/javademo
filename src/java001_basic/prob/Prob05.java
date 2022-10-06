@@ -18,9 +18,13 @@ public class Prob05 {
 		int en = 45;
 		int jp = 22;
 		int hap = ko + en + jp;
+		
 
 		// 여기에 구현하세요.
-		
+		double res = (double)(hap/3);
+		String result = res>=60? "합격" : "불합격";
+		System.out.println(res);
+		System.out.printf("평균 %.1f점, %s 입니다", res, result);
 		
         
 	}//end main()

@@ -18,7 +18,8 @@ public class Prob06 {
 		int jumsu = 85;
 
 		// 여기에 작성하시오.
-		
+		String res = jumsu>=80? "상" : (jumsu>=65? "중":"하");
+		System.out.println(res);
 
 	}// end main( )
 

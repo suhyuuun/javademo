@@ -12,7 +12,11 @@ public class Prob03 {
 
 	public static void main(String[] args) {
 	  //여기에 구현하세요.		
+     int apple = 123;
+     int basketStorage = 10;
      
+     int res = apple % basketStorage == 0? apple/basketStorage : apple/basketStorage + 1;
+     System.out.println(res);
       
 	}//end main()
 

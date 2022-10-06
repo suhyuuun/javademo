@@ -12,6 +12,8 @@ public class Prob02 {
 		int num = -10;
 		//여기에 작성하시오.
 		
+		int abs = num>0? num : -num;
+		System.out.println(abs);
 	}
 
 }
