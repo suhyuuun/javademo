@@ -17,8 +17,7 @@ public class Java060_method {
 	
 	public static int length(char[]data) {
 		//data배열의 크기를 리턴하도록 구현
-		int length = data.length;
-		return length;
+		return data.length;
 	}//end length()
 	
 	public static char charAt(char[]data, int index){

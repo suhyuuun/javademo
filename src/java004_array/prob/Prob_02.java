@@ -15,8 +15,21 @@ public class Prob_02 {
 		int cnt = 1;
 		
 		// 여기를 구현하시오.
+		for(int i=0;i<3;i++) {
+			for(int j=0;j<3;j++) {
+				data[i][j] = cnt++;
+			}
+		}
 		
-	}// end main()
+		
+		
+		for(int row=0;row<data.length;row++) {
+			for(int col=0;col<data[row].length;col++) {
+				System.out.printf("%4d",data[row][col]);
+			}
+			System.out.println();
+		}
+			}// end main()
 
 }// end class
 

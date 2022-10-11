@@ -16,7 +16,7 @@ public class Prob_04 {
 		int num[] = new int[] { 3, 2, 5, 6, 1 };
 
 		// 여기를 구현하시오
-
+		
 	}// end main()
 
 }// end class
