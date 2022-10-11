@@ -23,6 +23,7 @@ public class Prob_02 {
 		
 		
 		
+		
 		for(int row=0;row<data.length;row++) {
 			for(int col=0;col<data[row].length;col++) {
 				System.out.printf("%4d",data[row][col]);
