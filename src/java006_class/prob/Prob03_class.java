@@ -15,6 +15,13 @@ public class Prob03_class {
 
 	public static void main(String[] args) {
 		//여기를  구현하세요.
+		Box a = new Box();
+		Box b = new Box(20,3);
+		
+		a.fill('&');
+		a.draw();
+		b.fill('%');
+		b.draw();
 		
 
 	}//end main()

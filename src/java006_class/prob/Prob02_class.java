@@ -19,10 +19,6 @@ public class Prob02_class {
 		Book2 emptyBook = new Book2();
 		/////////여기에 구현하세요.
 		bible.show();
-		
-		
-		
-	
 		/////////////////////////////////////
 		
 	}//end main( )
