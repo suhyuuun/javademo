@@ -18,4 +18,39 @@ package java008_static_access.prob.part02;
 
 public class Sales {
 
+	private String item;
+	private int qty;
+	private int cost;
+	
+	public void setItem(String item) {
+		this.item = item;
+	}
+	
+	public void setQty(int qty) {
+		this.qty = qty;
+	}
+	public void setCost(int cost) {
+		this.cost = cost;
+	}
+	
+	public String getItem() {
+		return item;
+	}
+	
+	public int getQty() {
+		return qty;
+	}
+	
+	public int getCost() {
+		return cost;
+	}
+	
+	public int getPrice() {
+		return qty * cost;
+	}
+	
+	public String toString() {
+		return "품목 : " + item + "수량 : " + qty + "단가 : " + cost + "원" + "금액 : " + getPrice() + "원";
+	}
+	
 }

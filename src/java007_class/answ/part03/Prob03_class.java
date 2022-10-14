@@ -1,4 +1,4 @@
-package java007_class.prob.part03;
+package java007_class.answ.part03;
 
 /*
  * [출력결과]
@@ -25,10 +25,10 @@ public class Prob03_class {
 	
 	public static void display(Pitcher[] arr){
 		//이름과 투구이닝 자책점 방어율 순으로 출력하는 로직 구현
-		System.out.println("이름    투구이닝    자책점    방어율");
-		for(int i=0;i<arr.length;i++) {
+		System.out.println("이름      투구이닝      자책점      방어율");
+		for(int i=0;i<arr.length;i++){
 		System.out.println(arr[i].toString());
-		}
+		}		
 	}//end display( )
 
 }//end class

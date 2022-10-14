@@ -1,4 +1,5 @@
-package java007_class.prob.part02;
+package java007_class.answ.part02;
+
 /*
  * 1 연봉등급을 이용해서 각 사원의 연봉등급을 출력하는 로직을 구현하시오.
  * 
@@ -23,7 +24,7 @@ public class Prob02_class {
 
 		System.out.println("<<연봉등급표 출력>>");
 		display(sg);
-		
+
 		System.out.println("<<사원의 연봉등급 출력>>");
 		display(sg, "홍길동", 3500);
 		display(sg, "이영희", 1800);
@@ -32,18 +33,20 @@ public class Prob02_class {
 
 	public static void display(SalesGrade[] sg) {
 		// 연봉등급표를 출력하는 로직구현
-		for(int i=0;i<sg.length;i++) {
-		System.out.println(sg[i].toString());
+		for (int i = 0; i < sg.length; i++) {
+			System.out.println(sg[i].toString());
 		}
+		System.out.println();
 	}// end display()
 
 	public static void display(SalesGrade[] sg, String name, int sales) {
 		// 사원의 연봉등급을 출력하는 로직구현
-		for(int i=0;i<sg.length;i++) {
-			if(sales <= sg[i].hisal && sales > sg[i].losal) {
-				System.out.printf("%s님의 연봉은 %c입니다\n",name, sg[i].grade);
+		for (int i = 0; i < sg.length; i++) {
+			if (sales <= sg[i].hisal && sales >= sg[i].losal) {
+				System.out.printf("%s님의 연봉은 %s 등급입니다.", name, sg[i].grade);
 			}
 		}
+		System.out.println();
 	}// end display()
 
 }// end class
