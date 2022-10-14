@@ -23,7 +23,7 @@ public class Prob02_class {
 
 		System.out.println("<<연봉등급표 출력>>");
 		display(sg);
-
+		
 		System.out.println("<<사원의 연봉등급 출력>>");
 		display(sg, "홍길동", 3500);
 		display(sg, "이영희", 1800);
@@ -32,12 +32,14 @@ public class Prob02_class {
 
 	public static void display(SalesGrade[] sg) {
 		// 연봉등급표를 출력하는 로직구현
-
+		for(int i=0;i<sg.length;i++) {
+		System.out.println(sg[i].toString());
+		}
 	}// end display()
 
 	public static void display(SalesGrade[] sg, String name, int sales) {
 		// 사원의 연봉등급을 출력하는 로직구현
-
+		
 	}// end display()
 
 }// end class
