@@ -52,7 +52,9 @@ public class Book{
 		this.page = page;
 	}
 	
-	
+	public String toString() {
+		return String.format("%s의 저자는 %s이고 %d페이지로 구성됨", title, author, page);
+	}
 }
 
 

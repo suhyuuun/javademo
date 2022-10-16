@@ -29,11 +29,11 @@ public class Prob01_inheritance {
 
 	public static void main(String[] args) {
 		//테스트를 할때는 아래 주석을 해제하세요.
-		/*
+		
 		ClassTest_2 ct=new ClassTest_2("이지나",3000,"교육부");
 		ct.callSuperThis();
 		ct.getInformation();	
-		*/	
+			
 	}// end main()
 
 }// end class
