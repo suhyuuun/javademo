@@ -2,7 +2,7 @@ package java009_inheritance.prob.part05;
 
 public class Book {
 	String bookName; //첵이름
-	String author; //작가명
+	String author; //작가명 
 	int price; //정가
 
 	public Book(String bookName, String author, int price) {

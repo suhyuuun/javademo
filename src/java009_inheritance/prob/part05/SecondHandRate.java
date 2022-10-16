@@ -45,7 +45,7 @@ public class SecondHandRate extends Book {
 		return shprice;
 	}
 
-	// display()메소드 오버라이딩하시오.
+	// display()메소드 오버라이딩
 	@Override
 	public void display() {
 		System.out.printf("%s %10s %10s %10.0f\n", bookName, author, Grade(), SecondHandPrice());

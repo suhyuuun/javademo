@@ -27,7 +27,6 @@ public class Prob05_inheritance {
 		
 		
 		System.out.println("책이름         작가명        등급        매입가격");
-
 		sh[0].display();
 		sh[1].display();
 		sh[2].display();
