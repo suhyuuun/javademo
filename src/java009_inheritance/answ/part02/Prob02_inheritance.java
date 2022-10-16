@@ -1,4 +1,4 @@
-package java009_inheritance.prob.part02;
+package java009_inheritance.answ.part02;
 
 /*
  * [주의]테스트를 할때 main( )메소드의 주석을 해제하세요.
@@ -15,9 +15,6 @@ package java009_inheritance.prob.part02;
  박길동	16	175	 65	   201103
  */
 
-
-
-
 public class Prob02_inheritance {
 	public static void main(String args[]) {
 		//테스트를 할때 아래 주석을 해제하세요.
@@ -26,7 +23,7 @@ public class Prob02_inheritance {
 		StudentExam se[]=new StudentExam[3];
 		se[0]=new StudentExam("홍길동",15,171, 81, "201101");
 		se[1]=new StudentExam("정길동",13,183, 72, "201102");
-		se[2]=new StudentExam("박길동",16,175, 65, "201103");
+		se[2]=new StudentExam("박길동",16,175, 65, "201103");		
 		
 		System.out.printf("%4s %5s %8s %8s %8s\n","name","나이","신장","몸무게","학번");
 		
