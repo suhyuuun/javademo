@@ -31,7 +31,7 @@ public class SecondHandRate extends Book {
 
 	public float SecondHandPrice() {
 		// 중고책 값을 구하는 로직을 구현하세요
-		// 최상 10%할인 상 30%할인 중 50%할인 매입불가 -> 매입불가합니다.
+		// 최상 10%할인 상 30%할인 중 50%할인 매입불가 0원
 		float shprice = 0;
 		if (Grade() == "최상") {
 			shprice = (float) (price * 0.9);
@@ -48,6 +48,6 @@ public class SecondHandRate extends Book {
 	// display()메소드 오버라이딩
 	@Override
 	public void display() {
-		System.out.printf("%s %10s %10s %10.0f\n", bookName, author, Grade(), SecondHandPrice());
+		System.out.printf("%s %10s %10s %10.0f\n원", bookName, author, Grade(), SecondHandPrice());
 	}
 }
