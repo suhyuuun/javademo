@@ -30,9 +30,9 @@ public class Prob02_inheritance {
 		
 		System.out.printf("%4s %5s %8s %8s %8s\n","name","나이","신장","몸무게","학번");
 		
+		
 		for(StudentExam sm : se)
 		System.out.println(sm.toString());
-		
 	}//end main()
 }//end class
 
