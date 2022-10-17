@@ -11,8 +11,11 @@ public class Staff extends Person {
 		// 주민번호를 이용해서 성별을 구한후 반환하는 로직을 구현하세요.
 		//String jumin="890426-1056214";
 		//char data=jumin.charAt(0);
-		
-		return ' ';
+		char gender = ' ';
+		if(jumin.charAt(6) == '1') {
+			gender = '남';
+		}else {gender = '여';}
+		return gender;
 	}
 
 	@Override
@@ -23,7 +26,13 @@ public class Staff extends Person {
 		//1,2 => 19+year   3,4=>20+year
 		//if(jumin.charAt(7)=='1')
 		//int num=Integer.parseInt(year);
-		return 0;
+		int year = 0;
+		String yr = jumin.substring(0,2);
+		int num=Integer.parseInt(yr);
+		if(jumin.charAt(6) == '1' || jumin.charAt(6) == '2') {
+			year = 1900 + num;
+		}else year = 2000 + num;
+		return year;
 	}
 
 	@Override

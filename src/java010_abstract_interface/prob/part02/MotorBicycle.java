@@ -10,6 +10,13 @@ public class MotorBicycle implements IBicycle, IMotor {
     // IBicycle에 있는 추상 메소드를 구현하세요
     public void prtInfo() {
         //여기
+    	frameSize = FrameSize_M;
+    	motorSize = Motor_Size_Large;
+    	System.out.printf("ID : %d\n",id);
+    	System.out.printf("Brand : %s\n",brand);
+    	System.out.printf("Frame Size : %d\n",frameSize);
+    	System.out.printf("Motor Size : %d\n",motorSize);
+    	
     	
     }
     // IMotor에 있는 추상 메소드를 구현하세요

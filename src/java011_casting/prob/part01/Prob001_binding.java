@@ -16,6 +16,6 @@ public class Prob001_binding {
 	public static void main(String[] args) {
 		CPoint a, b;
 		// 여기에서 구현하세요.
-
+		
 	}//end main()
 }//end class

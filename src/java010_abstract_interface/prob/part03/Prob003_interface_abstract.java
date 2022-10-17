@@ -12,9 +12,10 @@ package java010_abstract_interface.prob.part03;
 public class Prob003_interface_abstract {
 	public static void main(String[] args) {
 		// 테스트할때 주석을 아래 주석을 해제 하세요.
-		/*
-		 * Whale whale1 = new Whale(); 
-		 * whale1.swim(); whale1.bear();
-		 */
+		
+		 Whale whale1 = new Whale(); 
+		 whale1.swim(); 
+		 whale1.bear();
+		 
 	}// end main()
 }// end class
