@@ -18,13 +18,11 @@ public class Prob001_String {
 	private static String initcap(String str) {
 		// 매개변수로 받은 문자열에서 각 단어의 첫 번째 글자만 대문자로
 		// 변환하여 반환하는 프로그램을 구현하시오.
-		for(int i=0;i<str.length();i++) {
-			if(str.charAt(i) == ' ') {
-				//str.charAt(i-1).toUpperCase();
-			}
+		String[] arr = str.split(" ");
+		for(int i=0;i<arr.length;i++) {
+			String.valueOf(arr[i].charAt(0)).toUpperCase();	
+			
 		}
-	
-		return null;
-		
+		return str;
 	}// end initcap()
 }// end class
