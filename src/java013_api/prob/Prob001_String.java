@@ -22,7 +22,7 @@ public class Prob001_String {
 		//Product 객체를 생성후 리턴하는createProduct() 메서드를 구현하시오. 
              
 		return null;
-	}// end creatProduct
+	}// end createProduct
 }// end class
 
 
