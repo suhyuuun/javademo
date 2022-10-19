@@ -23,7 +23,9 @@ public class Java136_Math {
 		System.out.println(num);
 		
 		System.out.println("=============================");
-		System.out.println((double)(round(random()*100))/10);
+		double res = random();
+		System.out.println(res);
+		System.out.println((double)(round(res*100))/10);
 	}//end main()
 
 }//end class
