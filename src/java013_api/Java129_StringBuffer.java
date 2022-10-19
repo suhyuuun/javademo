@@ -1,4 +1,4 @@
-package java012_api;
+package java013_api;
 /*
  * java.lang.String: immutable(불변)
  * java.lang.StringBuffer: mutable(가변), 동기화

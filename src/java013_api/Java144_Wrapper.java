@@ -1,4 +1,4 @@
-package java012_api;
+package java013_api;
 /*
  * 1. 기본자료형을 클래스로 정의해놓은 것을 Wrapper라 한다.
  * char     ->  Character
