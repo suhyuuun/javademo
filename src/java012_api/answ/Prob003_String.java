@@ -1,4 +1,4 @@
-package java012_api.prob;
+package java012_api.answ;
 
 /*
  * 1 매개변수로 받은 문자열에서 각 단어의 첫 번째만
@@ -17,7 +17,7 @@ public class Prob003_String {
 		}//end main()
 
 		private static String makeInitial(String fullName) {
-			//fullName의 매개변수에서 각 단어의 첫글자만
+			//fullName의 매개변수에서 각 단어의 첫글자만 
 			//반환하는 프로그램을 구현하시오.
 			String data="";
 			

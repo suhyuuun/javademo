@@ -1,4 +1,4 @@
-package java012_api.prob;
+package java012_api.answ;
 
 /* 
  * arr매개변수에서 '-'은 공백으로 , '/'은 ':'으로 변경한후
@@ -16,7 +16,7 @@ public class Prob004_String {
 
 	static String process(char[] arr) {
 		// arr매개변수에서 '_'은 공백으로 , '/'은 ':'으로 변경한후
-		// 리턴하는 프로그램을 구현하시오.
+		// 리턴하는 프로그램을 구현하시오
 		for(int i=0; i<arr.length; i++){
 			if(arr[i]=='_')
 				arr[i]=' ';
