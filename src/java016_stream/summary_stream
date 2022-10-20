@@ -19,10 +19,3 @@
      FileInput(Output)Stream, ByteArrayInput(Output)Stream
      데이터 처리 스트림(데이터의 조작 기능)-목적지에 간접연결
      BufferedInput(Output)Stream
-     
-     
-     
-     
-     
-     
-     
