@@ -27,6 +27,7 @@ public class Java166_stream {
 			fw.write("\n");
 			fw.flush();
 			fw.write(97); //unicode인 a가 들어감
+			fw.write("\n");
 			fw.flush();
 			fw.write(new char[] {'s','p','r','i','n','g'},0,3);
 			fw.write("\n");
