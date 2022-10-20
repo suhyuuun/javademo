@@ -1,5 +1,8 @@
 package java014_api.prob;
 
+import static java.lang.Math.floor;
+import static java.lang.Math.random;
+
 import java.util.Random;
 import java.util.Scanner;
 /*
@@ -22,6 +25,17 @@ public class Prob001_Scanner {
 		int userNum =0;//사용자가 입력할 값을 저장할 변수
 		int count = 0;//실행횟수를 저장할 변수
 		//randomNum과 userNum이 일치할때 까지 반복하여 입력받아 평가하는 코드를 작성하세요.
+		randomNum = (int)floor(random()*100);
+		System.out.println(randomNum);
+		System.out.print("1부터 100까지 숫자를 입력하세요:");
+		userNum = key.nextInt();
+
+			if(userNum < randomNum) {
+			System.out.println("1부터 100까지 숫자를 입력하세요");
+			userNum = key.nextInt();
+		}else
+			System.out.println("사용자가 입력한 값과 컴퓨터가 발생시킨 임의의 값이 일치합니다.");
+		
 		
 		
 	}//end main()
