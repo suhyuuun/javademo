@@ -1,0 +1,59 @@
+오류
+ 1 에러(error) : 프로그램 코드에 의해서 해결할 수 없는 심각한 오류
+ 2 예외(exception) : 프로그램 코드에 의해서 해결할 수 있는 오류
+
+ exception을 제공해준 목적 :
+ 기본 시스템은 정확하지 않는 값을 처리하는데 자바에서는  정확한 값만 처리할수
+ 있도록 exception을 제공해준다.
+ exception이 발생이 되면 프로그램이 정상적인 종료가 안되므로 이를 해결하기
+ 위해서 예외처리를 제공해주고 있다. 
+ int[] arr = new int[3];
+ arr[4] =10;
+
+ 예외가 발생되는 시점에 따라
+ 1 checked exception
+ 컴파일시점에 발생이 되므로 반드시 예외처리를 해야한다.
+ RuntimeException외 클래스들이다.
+ 2 unchecked exception
+ 실행시점에 발생이되므로 예외처리를 선택이다.
+ RuntimeException과 하위클래스들이다.
+
+ 예외처리
+ 1  try{
+ //exception 발생 가능이 있는 구문
+ }catch(//try영역에서 발생된 exception객체 선언){
+ //try영역에서 exception이 발생되었을때 해결해주는 구문
+ }finally{
+ //무조건 실행되는 구문
+ }
+
+ 2 exception이 발생되었을때 처리순서
+ try영역-> catch영역-> finally영억
+ exception이 발생되지 않았을때 처리순서
+ try영역->finally영역
+ 
+ (자원을 반납할 때 finally 사용 , DB연동 등등)
+
+
+ 3 try영역 또는 catch영역 에서 return을 만나고 finally영역을 수행을 한다.
+ 4 try~catch, try~finally만 작성해도 가능하다.
+ 단 catch~finally, try은 사용할 수 없다.
+
+ 5 예외의 메세지
+ String getMessage() :메세지
+ String toString() : 예외타입과 메세지
+ void printStackTrace() : 예외가 발생된 경로 추적
+ 
+다중catch
+ 1 is a(상속)관계에 있는 exception들을 나열할때는 제일위에 최하위 자손
+   제일 아래에 최상의 조상을 입력한다.
+ 2 is a관계가 아닌  exception객체들은 순서에 상관없다.
+
+ 
+ throws
+ 예외처리를 현재 메소드를 호출하는 곳으로 떠 넘길때 사용한다.
+ java.io, java.net
+ 
+ throw
+ 강제적으로 exception을 발생시킬때 사용한다.
+ 
