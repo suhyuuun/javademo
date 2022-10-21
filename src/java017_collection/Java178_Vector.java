@@ -27,6 +27,11 @@ public class Java178_Vector {
 		System.out.println(it3.intValue());
 		System.out.println(it4.intValue());
 		System.out.println(sn.toString());
+		try {
+		System.out.println(v.get(20));
+		}catch(ArrayIndexOutOfBoundsException ex) {
+			System.out.println(ex.toString());
+		}
 
 	}//end main()
 
