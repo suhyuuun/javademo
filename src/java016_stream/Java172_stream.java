@@ -12,7 +12,7 @@ public class Java172_stream {
 		// System.out.println(file.isDirectory()); //false
 		File file = new File("src/java016_stream/sample.txt");
 
-		//시스템이 종료되면 파일삭제
+		//종료시 삭제하도록 설정
 		file.deleteOnExit();
 		
 		Scanner sc= new Scanner(file);
