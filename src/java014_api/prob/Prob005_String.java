@@ -28,12 +28,12 @@ public class Prob005_String {
 	
 	public static String[] tokenData(String data){
 		
-		return null;
+		return data.split(":");
 	}
 	
 	public static Drink process(String[] data){
-		
-		return null;
+		Drink dn = new Drink(data[0],Integer.parseInt(data[1]), Integer.parseInt(data[2]));
+		return dn;
 	}
 	
 	

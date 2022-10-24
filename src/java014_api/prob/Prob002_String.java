@@ -18,27 +18,33 @@ package java014_api.prob;
 public class Prob002_String {
 
 	public static void main(String[] args) {
-		String src = ""; //source
-		String con = ""; //convert
+
+		String src = "JAva Test"; // source
+		String con = "jaVA tEST"; // convert
 		int length = 0;
+
+		for (int i = 0; i < args.length; i++) {
+			src += args[i] + " ";
+			con += convert(args[i]) + " ";
+			length += args[i].length();
+			}
 		
-//		for(int i = 0; i<args.length; i++) {
-//			src += args[i] + " ";
-//			length += convert(args[i]) + " ";
-		}//end main
-	
+		System.out.println("source : " + src);
+		System.out.println("convert : " + con);
+		System.out.println("length : " + (length+args.length-1));
+		System.out.println("reverse : " + new StringBuffer(src.trim()).reverse());
+	}// end main
 
 	public static String convert(String data) {
-		String arr="";
-		for(int i = 0; i< data.length();i++) {
-			if(Character.isUpperCase(data.charAt(i)))
+		String arr = "";
+		for (int i = 0; i < data.length(); i++) {
+			if (Character.isUpperCase(data.charAt(i)))
 				arr += Character.toLowerCase(data.charAt(i));
 			else
 				arr += Character.toUpperCase(data.charAt(i));
 		}
 		return arr;
-	
-	}
-		
-}// end class
 
+	}
+
+}// end class

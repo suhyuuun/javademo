@@ -20,12 +20,12 @@ public class Prob006_String {
 	
 	public static char toChar(int x){
 		
-		return ' '; 
+		return (char)x; 
 	}
 	
 	public  static String result(char data){
 	
-		return null;
+		return String.valueOf(data);
 	}	
 }
 

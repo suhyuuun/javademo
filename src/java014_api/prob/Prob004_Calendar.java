@@ -36,8 +36,27 @@ public class Prob004_Calendar {
 
 	public static int[][] process(int year, int month) {
 		int[][] data = new int[6][7];
-
+		Calendar cal = Calendar.getInstance();
+		cal.set(year, month - 1, 1);
 		
+		//월의 마지막일
+		int lastDate = cal.getActualMaximum(Calendar.DATE);
+		
+		//1일의 요일
+		int firstDay = cal.get(Calendar.DAY_OF_WEEK);
+		
+		int cnt = 1;
+		label: for(int i = 0; i < 6; i++) {
+			for (int j = 0; j < 7; j++) {
+				if(i ==0 && j >=(firstDay -1))
+					data[i][j] = cnt++;
+				else if( i>=1)
+					data[i][j] = cnt++;
+				
+				if(cnt > lastDate)
+					break label;
+			}
+		}
 		return data;
 	}
 
@@ -45,7 +64,15 @@ public class Prob004_Calendar {
 		System.out.printf("%10d년도  %6d월\n", year, month);
 
 		System.out.println("  일    월    화    수    목    금    토");
-		
+		for(int i = 0;i < 6; i++) {
+			for(int j = 0; j < 7; j++) {
+				if(arr[i][j] == 0)
+					System.out.printf("%4c", ' ');
+				else
+					System.out.printf("%4d", arr[i][j]);
+			}
+			System.out.println();
+		}
 		
 
 	}// end prn()
