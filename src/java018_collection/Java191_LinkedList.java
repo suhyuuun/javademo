@@ -14,6 +14,11 @@ public class Java191_LinkedList {
 		
 		//append
 		nQueue.offer(new String("java"));
+		nQueue.offer(new String("jsp"));
+		nQueue.offer(new String("spring"));
+
+		while(!nQueue.isEmpty())
+			System.out.println(nQueue.poll()); //꺼내오는 것     pop사용해도 가능은 하다.-> pointer를 이용해서 처리하기 때문  
 		
 	}//end main()
 

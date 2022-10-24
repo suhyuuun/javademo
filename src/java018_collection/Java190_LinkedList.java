@@ -26,6 +26,8 @@ public class Java190_LinkedList {
 		
 		while(!nStack.isEmpty())
 			System.out.println(nStack.pop());
+		
+		
 	}// end main()
 
 }// end class
