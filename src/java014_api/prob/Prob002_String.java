@@ -18,8 +18,9 @@ package java014_api.prob;
 public class Prob002_String {
 
 	public static void main(String[] args) {
-		System.out.println(args[0]);
-		System.out.println(args[1]);
+		String src = ""; //source
+		String con = ""; //convert
+		int length = 0;
 	}
 		
 }// end class

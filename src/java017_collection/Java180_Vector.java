@@ -1,6 +1,17 @@
 package java017_collection;
 
 import java.util.Vector;
+/*
+ * 배열 : length 키워드
+ * 문자열 : length() 메소드
+ * 컬렉션 : size()메소드
+ */
+
+/*
+ * 컬렉션 클래스를 선언하고 생성할 때 제너릭을 선언한다.
+ * 제너릭(generic) : 컬렉션 클래스에 저당된 객체를 가져올때
+ * 다운캐스팅하는 작업을 생략할 수 있도록 제공해주는 기능이다.
+ */
 
 public class Java180_Vector {
 
