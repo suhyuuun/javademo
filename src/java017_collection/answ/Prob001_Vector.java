@@ -30,7 +30,7 @@ public class Prob001_Vector {
 		
 		Vector<Book> v=new Vector<Book>();
 		Scanner sc=new Scanner(new 
-				File(".\\src\\java0412_collection\\answ\\booklist.txt"));
+				File(".\\src\\java017_collection\\answ\\booklist.txt"));
 		while(sc.hasNextLine()){
 			//SQL Fundmental/SQLBest/Na SQL/47000	
 			String[] line=sc.nextLine().split("/");
