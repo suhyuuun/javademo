@@ -28,7 +28,7 @@ public class Prob001_Vector {
 
 	private static Vector<Book> makeBookList() throws Exception {
 		// booklist.txt 파일의 데이터를 Vector에 저장한 후 리턴하는 프로그램을 구현하시오.
-		File file = new File("src/java017_collection.prob/booklist.txt");
+		File file = new File("src/java017_collection/prob/booklist.txt");
 
 		
 		return null;
