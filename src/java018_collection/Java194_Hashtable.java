@@ -2,6 +2,7 @@ package java018_collection;
 
 import java.util.Enumeration;
 import java.util.Hashtable;
+import java.util.Set;
 
 /*
  * Hashtable
@@ -33,6 +34,12 @@ public class Java194_Hashtable {
 			Integer key = enuKey.nextElement();
 			System.out.printf("%d: %s \n",key, table.get(key));
 		}
+		
+		System.out.println("===========================================");
+		Set<Integer> st = table.keySet(); //returntype -> set
+		//for(Integer key : table.keySet())
+		for(Integer key : st)
+			System.out.printf("%d:%s\n",key, table.get(key));
 		
 	}//end main()
 
