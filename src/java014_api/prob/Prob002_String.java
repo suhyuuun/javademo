@@ -21,6 +21,23 @@ public class Prob002_String {
 		String src = ""; //source
 		String con = ""; //convert
 		int length = 0;
+		
+//		for(int i = 0; i<args.length; i++) {
+//			src += args[i] + " ";
+//			length += convert(args[i]) + " ";
+		}//end main
+	
+
+	public static String convert(String data) {
+		String arr="";
+		for(int i = 0; i< data.length();i++) {
+			if(Character.isUpperCase(data.charAt(i)))
+				arr += Character.toLowerCase(data.charAt(i));
+			else
+				arr += Character.toUpperCase(data.charAt(i));
+		}
+		return arr;
+	
 	}
 		
 }// end class
