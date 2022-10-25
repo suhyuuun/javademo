@@ -1,23 +1,22 @@
 package ncs.test7;
 
-public class Student extends Human{
-	String number;
-	String major;
-	
-public Student() {
-	super();
-}
+public class Student extends Human {
+	private String number;
+	private String major;
 
-public Student(String number, String major) {
-	super();
-	this.number = number;
-	this.major = major;
-}
+	public Student() {
+		super();
+	}
 
-@Override
-public String toString() {
-	return super.toString();
-}
+	public Student(String name, int age, int height, int weight, String number, String major) {
+		super(name, age, height,weight);
+		this.number = number;
+		this.major = major;
+	}
 
-	
+	@Override
+	public String toString() {
+		return String.format("%s  %d  %d  %d  %s  %s\n", getName(), getAge(), getHeight(), getWeight(), number, major);
+	}
+
 }
