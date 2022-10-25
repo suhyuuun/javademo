@@ -39,6 +39,7 @@ public class Prob002_ArrayList {
 		
 		System.out.println("컴퓨터책 대여수입");
 		System.out.println("---> " + BookManager.getRentalPrice(bookList, "컴퓨터"));
+		//static으로 선언되어있어야 저렇게 불러올수있음
 		
 		System.out.println("소설책 대여수입");
 		System.out.println("---> " + BookManager.getRentalPrice(bookList, "소설"));

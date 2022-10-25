@@ -38,13 +38,39 @@ public class Prob003_ArrayList {
 	
 	private static ArrayList<SmartPhone> phoneProduct(String pathFile) {
 		// phone.txt파일의 데이터를 ArrayList에 저장한후 리턴하는 프로그램을 구현하시오.
-		
-		return null;
+		ArrayList<SmartPhone> aList = new ArrayList<SmartPhone>();
+		Scanner sc = null;
+		try {
+			sc = new Scanner(new File(pathFile));
+			while(sc.hasNextLine()) {
+				String[] line = sc.nextLine().split(":");
+				SmartPhone sp = new SmartPhone();
+				sp.setProductId(line[0]);
+				sp.setName(line[1]);
+				sp.setPrice(Integer.parseInt(line[2]));
+				sp.setAmount(Integer.parseInt(line[3]));
+				sp.setMaker(line[4]);
+				aList.add(sp);
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}finally {
+			sc.close();
+		}
+		return aList;
 	}//end phoneProduct( )
 	
 	private static void prnDisplay(ArrayList<SmartPhone> phoneList){
 		//phoneList매개변수의 저장된 값을 출력하는 프로그램을 구현하시오.	
-
+		for(int i = 0; i<phoneList.size();i++) {
+			SmartPhone sp = phoneList.get(i);
+			System.out.printf("<<%d 번째 상품>>\n", i+1);
+			System.out.printf("제품 아이디 : %s\n", sp.getProductId());
+			System.out.printf("제품명 : %s\n", sp.getName());
+			System.out.printf("가격 : %d\n", sp.getPrice());
+			System.out.printf("수량 : %d\n", sp.getAmount());
+			System.out.printf("제조사 : %s\n", sp.getMaker());
+		}
 	}//end prnDisplay( )
 
 }//end class
