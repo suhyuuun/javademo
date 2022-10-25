@@ -24,8 +24,9 @@ public class Prob003_LinkedList {
 	public static Sports save(String code, String program){
 		//code, program매개변수에 저장된 값을 Sports클래스에 저장한후 
 		//리턴하는 프로그램을 구현하시오.
-		
-		return null;
+//		Sports st = new Sports(code, program);	
+//		return st;
+		return new Sports(code, program);
 	}//end save()
 
 }//end class

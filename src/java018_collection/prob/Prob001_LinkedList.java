@@ -25,7 +25,44 @@ public class Prob001_LinkedList {
 			SQL Fundmental 		SQLBest		 Na SQL 	47000
 			Java Programming 	JavaBest	 Kim kava	 25000
 		 */
+		LinkedList<Book> stack = new LinkedList<Book>();
+		try(Scanner sc = new Scanner(new File("./src/java018_collection/prob/booklist.txt"))){
+			while(sc.hasNextLine()) {
+			String[] line = sc.nextLine().split("/");
+			Book book = new Book(line[0],line[1], line[2], line[3]);
+			stack.push(book);
+			}
+		}catch(FileNotFoundException ex) {
+			System.out.println(ex.toString());
+		}
+		System.out.println(" title publisher writer price");
+		while(!stack.isEmpty()) {
+			Book book = stack.pop();
+			System.out.printf("%s %s %s %s\n",book.getTitle(), book.getPublisher(), book.getWriter(), book.getPrice());
+		}
 		
+//		Scanner sc = null;
+//		try {
+//			sc = new Scanner(new File ("src/java018_collection/prob"));
+//			while(sc.hasNextLine()) {
+//			String[] line = sc.nextLine().split("/");
+//			Book bk = new Book(line[0],line[1], line[2], line[3]);
+//			bk.setTitle(line[0]);
+//			bk.setPublisher(line[1]);
+//			bk.setWriter(line[2]);
+//			bk.setPrice(line[3]);
+//			nStack.push(bk.getTitle());
+//			nStack.push(bk.getPublisher());
+//			nStack.push(bk.getWriter());
+//			nStack.push(bk.getPrice());
+//			}
+//			
+//		} catch (FileNotFoundException e) {
+//			e.printStackTrace();
+//		}
+//		
+//		System.out.println("title             	publisher   writer     price");
+//		System.out.println(nStack.pop());
 	
 	}//end main()
 
