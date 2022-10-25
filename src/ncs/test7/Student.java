@@ -9,14 +9,13 @@ public class Student extends Human {
 	}
 
 	public Student(String name, int age, int height, int weight, String number, String major) {
-		super(name, age, height,weight);
+		super(name, age, height, weight);
 		this.number = number;
 		this.major = major;
 	}
-
 	@Override
 	public String toString() {
 		return String.format("%s  %d  %d  %d  %s  %s\n", getName(), getAge(), getHeight(), getWeight(), number, major);
 	}
-
 }
+

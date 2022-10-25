@@ -18,6 +18,8 @@ package java008_static_access.answ.part01;
  * +setEmployee(name:String, dept:String, pay:int, score:double)
  * +toString():String 
  */
+
+
 public class Employee {
 	private String name;
 	private String dept;

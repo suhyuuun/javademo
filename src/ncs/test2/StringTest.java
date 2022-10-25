@@ -10,15 +10,15 @@ public class StringTest {
 		//str에서 데이터를 분리한다.
 		String[] line = str.split(",");
 		
-		for(String s : line) {//for~each문 사용한다.
-		//배열에 실수 데이터를 넣는다.
-		//data[] = Double.parseDouble(line);
-		//배열의 데이터의 합을 구한다.
-			
+		for(int i = 0;i<line.length;i++) {
+			sum += Double.parseDouble(line[i]);
 		}
+		
+			
+		
 		//결과 값을 출력한다.
-		System.out.printf("합계:%.3f",sum);
-		System.out.printf("평균:%.3f",sum/data.length);
+		System.out.printf("합계:%.3f\n",sum);
+		System.out.printf("평균:%.3f\n",sum/data.length);
 	}// end main()
 
 }// end class
