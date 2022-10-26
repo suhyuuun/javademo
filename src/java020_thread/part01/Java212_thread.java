@@ -26,7 +26,12 @@ Hashtable       HashMap
 public class Java212_thread {
 
 	public static void main(String[] args) {
-		
+		User us = new User();
+		//us.run(); //thread로 돌아가는 게 아님 run()메소드 호출한거임
+		us.start(); //main thread와 us thread 2개가 돌아감 독립적으로 돌아감
+		for(int j = 0; j<=5; j++) {
+			System.out.printf("%s j=%d\n",Thread.currentThread(),j); //Thread.currentThread() : 현재 돌아가는 thread에 대한 정보가 나옴
+		}
 	}
 
 }
