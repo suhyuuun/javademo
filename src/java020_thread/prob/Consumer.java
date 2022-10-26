@@ -9,7 +9,7 @@ public class Consumer extends Thread{
 	@Override
 	public void run() {
 		for(int i = 0; i<=10;i++) {
-		System.out.printf("소비자 : 음료수 %s 자판기에 넣기",getName());
+		System.out.printf("소비자 : % 자판기에 넣기",getName());
 		}
 	}
 }

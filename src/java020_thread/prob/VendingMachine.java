@@ -1,13 +1,15 @@
 package java020_thread.prob;
 
 public class VendingMachine {
-	String drink;
-	
+	private String drink;
+
 	public String getDrink() {
 		return drink;
 	}
 	
 	synchronized public void putDrink(String drink) {
-		
+		System.out.println();
 	}
+	
+	
 }
