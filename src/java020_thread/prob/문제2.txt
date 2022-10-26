@@ -1,0 +1,21 @@
+[문제2] Thread객체를 생성한후 다음과 같이 출력하시오
+
+클래스명 : KoreanThread
+클래스명 : EnglishLowerThread
+클래스명 : EnglishUpperThread
+클래스명 : Prob002_thread.java
+		EnglishLowerThread t1=new EnglishLowerThread();
+		EnglishUpperThread t2=new EnglishUpperThread();
+		KoreanThread t3=new KoreanThread();
+	   
+	           -- 사용자가 나머지 구현하시오--   
+	           
+[조건]	     
+각각 데이타는 배열에 저장한후 사용한다
+
+[출력화면]	 
+abcdefghijklmnopqrstuvwxyz
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ
+
+차례대로 join걸기
