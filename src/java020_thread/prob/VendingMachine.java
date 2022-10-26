@@ -7,7 +7,7 @@ public class VendingMachine {
 		return drink;
 	}
 	
-	public void putDrink(String drink) {
+	synchronized public void putDrink(String drink) {
 		
 	}
 }
