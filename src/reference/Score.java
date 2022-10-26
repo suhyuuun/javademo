@@ -1,4 +1,4 @@
-package java023;
+package reference;
 
 import java.util.ArrayList;
 import java.util.Scanner;

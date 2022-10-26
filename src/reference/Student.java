@@ -1,4 +1,4 @@
-package java023;
+package reference;
 
 public class Student {
 	private String name;
