@@ -44,7 +44,7 @@ public class BookListTest {
 	}
 
 	public static void saveFile(ArrayList<Book> list) {
-		File file = new File("./src/ncs/test15/books.dat");
+		File file = new File("./src/ncs/answ/test15/books.dat");
 
 		FileOutputStream fs = null;
 		ObjectOutputStream os = null; //객체를 파일에 저장하기위한 스트림
@@ -73,7 +73,7 @@ public class BookListTest {
 	}
 
 	public static List<Book> loadFile() {
-		File file = new File("./src/ncs/test15/books.dat");
+		File file = new File("./src/ncs/answ/test15/books.dat");
 
 		FileInputStream fi = null;
 		ObjectInputStream oi = null;

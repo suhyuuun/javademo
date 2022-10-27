@@ -11,10 +11,17 @@ public class Book {
 		
 	}
 	
+	public Book(String title, String author, int price, String publisher, double discountRate) {
+		this.title = title;
+		this.author = author;
+		this.price = price;
+		this.publisher = publisher;
+		this.discountRate = discountRate;
+	}
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return super.toString();
+		return title + ", " + author + ", " + publisher + ", " + price + "원, " +
+		           (int)(discountRate * 100) + "% 할인";
 	}
 
 	public String getTitle() {
