@@ -12,7 +12,6 @@ public class Player {
 	}
 
 	public Player(String name, String instrument, int day, String programComposer, int quantity) {
-		super();
 		this.name = name;
 		this.instrument = instrument;
 		this.day = day;

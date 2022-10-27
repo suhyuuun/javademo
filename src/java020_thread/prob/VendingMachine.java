@@ -1,14 +1,25 @@
 package java020_thread.prob;
 
-public class VendingMachine {
-	private String drink;
+import java.util.Stack;
 
-	public String getDrink() {
-		return drink;
+public class VendingMachine {
+	Stack<String> store = new Stack<String>();
+
+	public synchronized String getDrink() {
+		while(store.isEmpty()) {
+			try {
+				wait();
+				}catch(InterruptedException e){
+					e.printStackTrace();
+				}
+		}
+		return store.pop().toString();
 	}
 	
-	synchronized public void putDrink(String drink) {
-		System.out.println();
+	
+	 public synchronized void putDrink(String drink) {
+		 store.push(drink);
+		 notifyAll();
 	}
 	
 	
