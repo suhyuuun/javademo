@@ -1,11 +1,11 @@
 package project;
 
 public class Player {
-	private String name;
-	private String instrument;
-	private int day;
-	private String programComposer;
-	private int quantity;
+	private String name; //연주자 이름
+	private String instrument; //악기
+	private int day; //공연날짜
+	private String programComposer; //프로그램 작곡가
+	private int quantity; //티켓값
 	
 	public Player() {
 		

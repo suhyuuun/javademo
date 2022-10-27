@@ -39,7 +39,7 @@ public class Concert {
 		boolean ing = true;
 		while (ing) {
 			System.out.println("1: 연주자 추가 2: 리사이틀 정보입력 3: 연주자의 리사이틀 정보 4: 모든 리사이틀 정보 5: 종료 ");
-			int num = Integer.parseInt(sc.nextLine());
+			int num = sc.nextInt();
 			switch (num) {
 			case 1:
 				System.out.println("연주자 추가를 선택하셨습니다");
