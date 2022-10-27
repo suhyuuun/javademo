@@ -1,6 +1,6 @@
 package ncs.test8;
 
-public class User {
+public class User implements Cloneable{
 	private String id;
 	private String password;
 	private String name;
@@ -9,32 +9,17 @@ public class User {
 	private String phone;
 	
 	public User() {
-		
+		super();
 	}
 	
 	public User(String id, String password, String name, int age, char gender, String phone) {
+		super();
 		this.id = id;
 		this.password = password;
 		this.name = name;
 		this.age = age;
 		this.gender = gender;
 		this.phone = phone;
-	}
-
-	@Override
-	public String toString() {
-		
-		return String.format("%s  %s  %s  %d  %c  %s\n", id,password,name,age,gender,phone);
-	}
-	
-	public boolean equals(Object Obj) {
-		
-		return false;
-	}
-	
-	@Override
-	public Object clone() throws CloneNotSupportedException {
-		return super.clone();
 	}
 
 	public String getId() {
@@ -85,5 +70,18 @@ public class User {
 		this.phone = phone;
 	}
 	
+	@Override
+	public String toString() {
+		return String.format("%s  %s  %s  %d  %c  %s\n", id,password,name,age,gender,phone);
+	}
+	
+	public boolean equals(Object obj) {
+		return this.toString().equals(obj.toString());
+	}
+	
+	@Override
+	public Object clone() throws CloneNotSupportedException {
+		return super.clone();
+	}
 	
 }

@@ -5,18 +5,18 @@ public class Player {
 	private String instrument; //악기
 	private int day; //공연날짜
 	private String programComposer; //프로그램 작곡가
-	private int quantity; //티켓값
+	private int price; //티켓값
 	
 	public Player() {
 		
 	}
 
-	public Player(String name, String instrument, int day, String programComposer, int quantity) {
+	public Player(String name, String instrument, int day, String programComposer, int price) {
 		this.name = name;
 		this.instrument = instrument;
 		this.day = day;
 		this.programComposer = programComposer;
-		this.quantity = quantity;
+		this.price = price;
 	}
 
 	public String getName() {
@@ -51,12 +51,12 @@ public class Player {
 		this.programComposer = programComposer;
 	}
 
-	public int getQuantity() {
-		return quantity;
+	public int getPrice() {
+		return price;
 	}
 
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
+	public void setPrice(int price) {
+		this.price = price;
 	}
 	
 	

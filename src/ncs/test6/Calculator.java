@@ -1,20 +1,21 @@
 package ncs.test6;
 
 public class Calculator {
-	double sum = 0.0;
-	public double getSum(int data) {
-		if(data>=2 && data<=5) {
-			for(int i = data;i<0;i--) {
-				sum += i;
+	public static double getSum(int data) {
+		double sum = 0.0;
+		if (data < 2 || data > 5) {
+			try {
+				throw new InvalidException("입력값에 오류가 있습니다.");
+
+			} catch (InvalidException e) {
+				System.out.println(e.getMessage());
+				System.exit(0);
 			}
-		}else {
-			System.out.println("입력 값에 오류가 있습니다.");
-			
+		}//end if
+		for (int i = 0; i <= data; i++) {
+			sum += i;
 		}
 		return sum;
-		
-		
-	}
-	
-	
-}
+
+	}// end getSum()
+}// end class

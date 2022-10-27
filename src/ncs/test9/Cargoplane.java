@@ -12,7 +12,8 @@ public class Cargoplane extends Plane{
 	
 	@Override
 	public void flight(int distance) {
-		System.out.printf("%s          %d\n", getPlanName(),getFuelSize() - distance*5);
+		super.fuelSize -= distance*5;
+		System.out.println(super.fuelSize);
 
 	}
 }

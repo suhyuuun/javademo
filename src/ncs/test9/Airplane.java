@@ -12,7 +12,7 @@ public class Airplane extends Plane{
 	
 	@Override
 	public void flight(int distance) {
-		System.out.printf("%s         %d\n", getPlanName(),getFuelSize() - distance*3);
+		super.fuelSize -= distance*3;
+		System.out.println(super.fuelSize);
 	}
-	
 }

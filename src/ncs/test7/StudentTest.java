@@ -11,7 +11,8 @@ public class StudentTest {
 		students[2] = new Student ("임꺽정",26,175,65,"201403","체육학");
 		
 		for(int i = 0; i<students.length;i++) {
-			System.out.print(students[i].toString());
+			//System.out.println(students[i].toString());
+			System.out.println(students[i]);
 		}
 	}
 

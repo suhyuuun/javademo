@@ -68,11 +68,11 @@ public class Concert {
 						System.out.print("리사이틀 프로그램 작곡가 :");
 						String programComposer = sc.next();
 						System.out.print("리사이틀 티켓값 :");
-						int quantity = sc.nextInt();
+						int price = sc.nextInt();
 						sc.nextLine();
 						p.setDay(day);
 						p.setProgramComposer(programComposer);
-						p.setQuantity(quantity);
+						p.setPrice(price);
 						break;
 					} // end if
 				}
@@ -90,7 +90,7 @@ public class Concert {
 					if (p.getName().equals(name)) {
 						nonelist = true;
 						System.out.println("연주자 이름 : " + p.getName() + " / 악기 : " + p.getInstrument() + " / 리사이틀 날짜 : " 
-											+ p.getDay() + " / 리사이틀 프로그램 작곡가 : " + p.getProgramComposer() + " / 리사이틀 티켓값 : " + p.getQuantity());
+											+ p.getDay() + " / 리사이틀 프로그램 작곡가 : " + p.getProgramComposer() + " / 리사이틀 티켓값 : " + p.getPrice());
 						break;
 					}//end if
 				}//end for
@@ -103,7 +103,7 @@ public class Concert {
 				for (int i = 0; i < recital.size(); i++) {
 					System.out.printf("연주자 이름 : %s / 악기 : %s / 리사이틀 날짜 : %d / 리사이틀 프로그램 작곡가 : %s / 리사이틀 티겟값 : %s\n",
 										recital.get(i).getName(), recital.get(i).getInstrument(),recital.get(i).getDay(),
-										recital.get(i).getProgramComposer(), recital.get(i).getQuantity());
+										recital.get(i).getProgramComposer(), recital.get(i).getPrice());
 				}
 				break;
 

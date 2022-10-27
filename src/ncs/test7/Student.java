@@ -13,9 +13,10 @@ public class Student extends Human {
 		this.number = number;
 		this.major = major;
 	}
+	
 	@Override
 	public String toString() {
-		return String.format("%s  %d  %d  %d  %s  %s\n", getName(), getAge(), getHeight(), getWeight(), number, major);
+		return super.toString() + "\t" + number + "\t" + major;
 	}
 }
 

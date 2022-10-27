@@ -1,12 +1,8 @@
 package ncs.test6;
 
-public class InvalidException extends Calculator{
-	String message;
+public class InvalidException extends Exception{
 	
 	public InvalidException(String message) {
-		System.out.println("입력값에 오류가 있습니다.");
+		super(message);
 	}
-
-	
-	
 }

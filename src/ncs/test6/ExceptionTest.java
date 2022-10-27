@@ -1,16 +1,12 @@
 package ncs.test6;
 
-import java.util.Scanner;
-
 public class ExceptionTest {
 
 	public static void main(String[] args) {
-		Calculator cl = new Calculator();
+		int data = 2;
+		double sum = Calculator.getSum(data);
 		
-		Scanner sc = new Scanner(System.in);
-		int num = sc.nextInt();
-		System.out.println(cl.getSum(num));
-		
+		System.out.println("결과값 : " + sum);
 		
 	}
 
