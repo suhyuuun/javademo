@@ -29,7 +29,7 @@ public class PropTest {
 	public static void fileSave(Properties p) {
 
 		try {
-			p.storeToXML(new FileOutputStream("./src/ncs/test12/data.xml"), null);
+			p.storeToXML(new FileOutputStream("./src/ncs/answ/test12/data.xml"), null);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -40,7 +40,7 @@ public class PropTest {
 		Fruit[] fruitArr = new Fruit[p.size()];
 
 		try {
-			fs = new FileInputStream("./src/ncs/test12/data.xml");
+			fs = new FileInputStream("./src/ncs/answ/test12/data.xml");
 			p.loadFromXML(fs);
 
 			for (int i = 1; i <= p.size(); i++) {

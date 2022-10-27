@@ -13,7 +13,6 @@ public class ListTest {
 			Random ran = new Random();
 			list.add(ran.nextInt(100) + 1);
 		}
-		// System.out.println(list);
 		// list의 데이터를 내림차순 정렬한다.
 		// display()메소드를 호출한다.
 		display(list);

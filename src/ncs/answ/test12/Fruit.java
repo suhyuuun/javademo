@@ -18,7 +18,7 @@ public class Fruit {
 
     @Override
 	public String toString() {
-		return name + ", " + price + "원," + quantity + "개";
+		return super.toString();
 	}
 
 

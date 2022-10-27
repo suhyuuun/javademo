@@ -17,6 +17,7 @@ public class Secretary extends Employee implements Bonus {
 	
 	@Override
 	public void incentive(int pay) {
-		System.out.printf("%s  %s    %.0f    %.1f\n",getName(), getDepartment(), getSalary()+(pay*0.8), tax(getSalary()+(pay*0.8)));
+		int sum = (int) (getSalary() + pay *0.8);
+		setSalary(sum);
 	}
 }

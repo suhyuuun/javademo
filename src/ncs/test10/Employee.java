@@ -18,7 +18,7 @@ abstract public class Employee {
 	}
 
 	public double tax() { // 세금
-		return 0.0;
+		return number;
 	}
 
 	public String getName() {
