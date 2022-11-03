@@ -11,7 +11,7 @@ import java.util.List;
 
 //DAO : Data Access Object (데이터 접근 객체)
 //DataBase에 접근하기 위한 로직 & 비지니스 로직을 분리하기 위해서 사용
-public class DepartmentsDAO { // spring에서는 레퍼지토리
+public class DepartmentsDAO { // spring에서는 Repository
 	private Connection conn;
 	private Statement stmt;
 	private PreparedStatement pstmt;
