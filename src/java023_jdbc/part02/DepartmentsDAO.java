@@ -8,6 +8,29 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+/*
+ *  1. ClassNotFoundException 
+ *  해결) JRE System Library에서 ojdbc6.jar파일 확인
+ *      Class.forName(): 경로확인
+ *      
+ * 2. java.sql.SQLException: 
+ *     IO예외 상황:  The Network Adapter...
+ *                 Listener refused.....  
+ *                 
+ *     해결) 제어판->관리도구->서비스->OracleServiceXE,
+ *            OracleXETNSListener을 다시 시작한다.
+ * 
+ * java.sql.PreparedStatement
+ * 1 반복되는 쿼리문의 수행에 사용한다.
+ * 2 미리 정의된 SQL문을 수행하기 때문에 Statement에 비해 속도가 빠르다.
+ * 3 위치표시자(placeholder)(?)를 사용하여 쿼리문을 간략하게 작성한다.
+ * 
+ * 싱글톤 패턴
+ *  : 하나의 객체만을 생성해서 사용할 수 있도록 설계한 구조이다.
+ *  1 생성자의 접근제어자는 private
+ *  2 객체자신을 생성을 한다.
+ *  3 생성된 객체를 넘겨줄 수 있는 메소드를 정의한다.
+ */
 
 //DAO : Data Access Object (데이터 접근 객체)
 //DataBase에 접근하기 위한 로직 & 비지니스 로직을 분리하기 위해서 사용
@@ -66,7 +89,7 @@ public class DepartmentsDAO { // spring에서는 Repository
 				dto.setDepartment_name(rs.getString("department_name"));
 				dto.setManager_id(rs.getInt("manager_id"));
 				dto.setLocation_id(rs.getInt("location_id"));
-				aList.add(dto); //따로따로 넣어주면 db에서 넘어온 데이터간의 관련성이 사라짐
+				aList.add(dto); //따로따로 넣어주면 DB에서 넘어온 데이터간의 관련성이 사라짐
 			}
 			conn.commit();
 		} catch (ClassNotFoundException | SQLException e) {
@@ -100,6 +123,13 @@ public class DepartmentsDAO { // spring에서는 Repository
 //			stmt = conn.createStatement();
 //			String sql = "SELECT * FROM departments WHERE department_name LIKE '%" + data + "%' ORDER BY department_id"; //변수는 쌍따옴표에서 빼줌
 //			rs = stmt.executeQuery(sql);
+			
+			//위치표시자(placeholder) : ?를 사용하여 미리 자리를 확보해주는 것, query문 간결하게 구현가능
+			//물음표가 지정된 순으로 인덱스 1,2,3 부여됨
+			String sql = "SELECT * FROM departments WHERE department_name LIKE ? ORDER BY department_id"; 
+			pstmt = conn.prepareStatement(sql); //query문에서 직접 가지고 오는 statement에 비해 대체적으로 속도가 빠르다.
+			pstmt.setString(1, "%" + data + "%"); //setInt, setDate ...
+			rs = pstmt.executeQuery();
 			
 			while(rs.next()) {
 				DepartmentsDTO dto = new DepartmentsDTO();

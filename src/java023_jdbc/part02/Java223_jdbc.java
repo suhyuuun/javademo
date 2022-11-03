@@ -20,21 +20,22 @@ public class Java223_jdbc {
 		int input = Integer.parseInt(sc.nextLine());
 		if(input == 1) {
 		List<DepartmentsDTO> aList = dController.departmentsAllProcess();
-		for (DepartmentsDTO dto : aList) {
-			System.out.printf("%d %s %d %d\n", dto.getDepartment_id(), dto.getDepartment_name(), dto.getManager_id(),
-					dto.getLocation_id());
-		}
+		display(aList);
 		}else if(input == 2) {
 			System.out.printf("부서 입력: ");
 			String line = sc.nextLine();
 			List<DepartmentsDTO> aList = dController.departmentsSearchProcess(line);
-			for (DepartmentsDTO dto : aList) {
-				System.out.printf("%d %s %d %d\n", dto.getDepartment_id(), dto.getDepartment_name(), dto.getManager_id(),
-						dto.getLocation_id());
-			}
+			display(aList);
 		}
 		
 
 	}//end main()
 
+	private static void display(List<DepartmentsDTO> aList) {
+		for (DepartmentsDTO dto : aList) {
+			System.out.printf("%d %s %d %d\n", dto.getDepartment_id(), dto.getDepartment_name(), dto.getManager_id(),
+					dto.getLocation_id());
+		}
+	}//end display()
+	
 }//end class
