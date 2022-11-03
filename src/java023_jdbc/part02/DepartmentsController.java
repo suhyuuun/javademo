@@ -13,4 +13,9 @@ public class DepartmentsController {
 		
 	}//end departmentsAllProcess()
 	
+	
+	public List<DepartmentsDTO> departmentsSearchProcess(String data){
+		DepartmentsDAO dao = DepartmentsDAO.getInstance();
+		return dao.searchDepartments(data);
+	}
 }//end class

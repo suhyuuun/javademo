@@ -89,4 +89,45 @@ public class DepartmentsDAO { // spring에서는 Repository
 		return aList; //rs로 리턴하면 null값이 넘어감 -> 최종적으로 연결종료를 하기 때문 (resultset에서 null값을 줌)
 	}//end listDepartments()
 	
+	
+	public List<DepartmentsDTO> searchDepartments(String data){
+		 List<DepartmentsDTO> aList = new ArrayList<DepartmentsDTO>();
+		 
+		 try {
+			conn = init();
+			conn.setAutoCommit(false);
+			
+//			stmt = conn.createStatement();
+//			String sql = "SELECT * FROM departments WHERE department_name LIKE '%" + data + "%' ORDER BY department_id"; //변수는 쌍따옴표에서 빼줌
+//			rs = stmt.executeQuery(sql);
+			
+			while(rs.next()) {
+				DepartmentsDTO dto = new DepartmentsDTO();
+				dto.setDepartment_id(rs.getInt("department_id"));
+				dto.setDepartment_name(rs.getString("department_name"));
+				dto.setManager_id(rs.getInt("manager_id"));
+				dto.setLocation_id(rs.getInt("location_id"));
+				aList.add(dto);
+			}
+			
+			conn.commit();
+			
+		} catch (ClassNotFoundException | SQLException e) {
+			try {
+				conn.rollback();
+			} catch (SQLException e1) {
+				e1.printStackTrace();
+			}
+			e.printStackTrace();
+		} finally {
+			try {
+				conn.setAutoCommit(true);
+				exit();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		 
+		 return aList;
+	}//end searchDepartments();
 }// end class
