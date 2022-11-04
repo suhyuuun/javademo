@@ -17,7 +17,7 @@ public class Java048_array_sol {
 				}else {
 					System.out.printf("%4d",num[row][col]);
 				}
-			}
+			}   
 			System.out.println();
 		}
 	}//end main()
