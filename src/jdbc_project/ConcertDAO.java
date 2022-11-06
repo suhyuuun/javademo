@@ -86,6 +86,19 @@ public class ConcertDAO {
 			return aList;
 		}//end listMethod()
 		
-		
+		public int insertMethod(ConcertDTO dto) {
+			int chk = -1;
+			
+			try {
+				conn = init();
+				conn.setAutoCommit(false);
+				
+				String sql = "INSERT INTO "
+			} catch (ClassNotFoundException | SQLException e) {
+				e.printStackTrace();
+			}
+			
+			return chk;
+		}
 		
 }//end class
