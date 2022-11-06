@@ -5,19 +5,21 @@ public class ConcertDTO {
 	private String name;
 	private String instrument;
 	private int day;
-	private String programComposer;
 	private int price;
+	private String programComposer;
+	
 	
 	public ConcertDTO() {
-
+		// TODO Auto-generated constructor stub
 	}
 	
-	public ConcertDTO(String name, String instrument, int day, String programComposer, int price) {
+	public ConcertDTO(String name, String instrument, int day, int price ,String programComposer) {
 		this.name = name;
 		this.instrument = instrument;
 		this.day = day;
-		this.programComposer = programComposer;
 		this.price = price;
+		this.programComposer = programComposer;
+		
 	}
 
 	public int getNum() {
@@ -67,6 +69,5 @@ public class ConcertDTO {
 	public void setPrice(int price) {
 		this.price = price;
 	}
-	
 	
 }
