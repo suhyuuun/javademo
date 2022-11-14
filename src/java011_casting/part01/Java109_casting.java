@@ -16,7 +16,7 @@ public class Java109_casting {
 		Parent p = new Parent();
 		Child c = new Child();
 		
-		//Parent p = new Child(); => 업캐스팅
+		//Parent p = new Child(); //=> 업캐스팅
 		p =c; //업캐스팅(up-casting)
 		p.process(); //Child process, 오버라이딩된 메소드라 가능
 		//p.call(); //직접적으로 자식클래스에 있는 메소드 불가
